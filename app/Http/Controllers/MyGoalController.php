@@ -11,7 +11,6 @@ class MyGoalController extends Controller
     private $rep;
 
     function __construct(MyGoalRepository $rep) {
-        var_dump($rep);
         $this->rep = $rep;
     }
 
@@ -43,7 +42,7 @@ class MyGoalController extends Controller
      */
     public function store(Request $request)
     {
-        $this->rep($request);
+        // $this->rep($request);
         return response('Hello World', 200)->header('Content-Type', 'text/plain');
     }
 
