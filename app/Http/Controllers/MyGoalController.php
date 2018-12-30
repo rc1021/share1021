@@ -11,6 +11,7 @@ class MyGoalController extends Controller
     private $rep;
 
     function __construct(MyGoalRepository $rep) {
+        var_dump($rep);
         $this->rep = $rep;
     }
 
