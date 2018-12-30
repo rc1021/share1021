@@ -26,7 +26,6 @@ class MyGoalRepository
                     $source = $event['source'];
                     switch ($message['type']) {
                         case 'text':
-var_dump($event);
                             // 記在資料庫
                             $new_goal = new Goal;
                             $new_goal->year = date('Y');
