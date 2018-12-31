@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Exception;
 use App\Goal;
 use App\Repositories\MyGoalRepository;
 use Illuminate\Http\Request;
