@@ -33,7 +33,7 @@ class MyGoalRepository
                                 'messages' => [
                                     [
                                         'type' => 'text',
-                                        'text' => "已更新年計劃\n並放入時光彩蛋 (ok) \n--\n在午夜12點前都可以變更:)"
+                                        'text' => "🌄已更新年計劃\n🥚並放入時光彩蛋\n--\n在午夜12點前都可以變更:)"
                                     ]
                                 ]
                             ]);
