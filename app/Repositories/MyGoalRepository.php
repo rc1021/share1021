@@ -18,7 +18,6 @@ class MyGoalRepository
                     $source = $event['source'];
                     switch ($message['type']) {
                         case 'text':
-                        error_log("hello, this is a test!");
                             // 記在資料庫
                             $new_goal = new Goal;
                             $new_goal->year = date('Y');
@@ -28,7 +27,6 @@ class MyGoalRepository
 
                             $new_goal->save();
 
-                            error_log($event['replyToken']);
                             // 通知聽友 OK
                             $client->replyMessage([
                                 'replyToken' => $event['replyToken'],
