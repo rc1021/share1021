@@ -42,7 +42,7 @@ class MyGoalController extends Controller
      */
     public function store(Request $request)
     {
-        dd($this->rep);
+        error_log($this->rep);
         // $this->rep($request);
         return response('Hello World', 200)->header('Content-Type', 'text/plain');
     }
