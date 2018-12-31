@@ -28,6 +28,7 @@ class MyGoalRepository
 
                             $new_goal->save();
 
+                            error_log("hello, this is a test!");
                             // 通知聽友 OK
                             $client->replyMessage([
                                 'replyToken' => $event['replyToken'],
