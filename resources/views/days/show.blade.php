@@ -53,7 +53,7 @@
       <div class="container">
         <h4 class="mt-2">{{$row->title}}</h4>
         <div class="video-wrapper text-center"> 
-            <iframe src="{{$row->video_url}}?rel=0&autoplay=1" frameborder="0" allowfullscreen="yes" allowvr="yes"></iframe>
+            <iframe src="{{$row->video_url}}?rel=0&autoplay=1" frameborder="0"></iframe>
         </div>
         <hr>
         <div>
