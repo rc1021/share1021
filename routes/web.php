@@ -15,4 +15,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::resource('goals', 'MyGoalController')->only(['store']);
+Route::resource('day', 'DayController')->only(['show']);
+// Route::resource('goals', 'MyGoalController')->only(['store']);
+
+
+Route::group(['prefix' => 'admin'], function () {
+    Voyager::routes();
+});
