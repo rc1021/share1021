@@ -34,7 +34,7 @@
       </style>
       <!-- Custom styles for this template -->
       <link href="{{ asset('css/sticky-footer.css') }}" rel="stylesheet">
-      
+
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-134198588-1"></script>
     <script>
@@ -53,7 +53,7 @@
       <div class="container">
         <h4 class="mt-2">{{$row->title}}</h4>
         <div class="video-wrapper text-center"> 
-            <iframe src="{{$row->video_url}}?rel=0&autoplay=1" frameborder="0" allowfullscreen></iframe>
+            <iframe src="{{$row->video_url}}?rel=0&autoplay=1" frameborder="0" allowfullscreen="yes" allowvr="yes"></iframe>
         </div>
         <hr>
         <div>
