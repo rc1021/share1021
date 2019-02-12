@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\DayStory;
+use Exception;
 
 class DayController extends Controller
 {
@@ -46,10 +47,15 @@ class DayController extends Controller
      */
     public function show($id)
     {
-        $post = DayStory::findOrFail($id);
-        views($post)->record();
-        $total = views($post)->unique()->count();
-        return view('days.show', ['row' => $post, 'visit_count' => $total]);
+        try {
+            $post = DayStory::findOrFail($id);
+            views($post)->record();
+            $total = views($post)->unique()->count();
+            return view('days.show', ['row' => $post, 'visit_count' => $total]);
+        }
+        catch(Exception $e) {
+            return "這篇文章還沒發佈喔, 敬請期待 :)";
+        }
     }
 
     /**
