@@ -46,7 +46,10 @@ class DayController extends Controller
      */
     public function show($id)
     {
-        return view('days.show', ['row' => DayStory::findOrFail($id)]);
+        $post = DayStory::findOrFail($id);
+        views($post)->record();
+        $total = views($post)->unique()->count();
+        return view('days.show', ['row' => $post, 'visit_count' => $total]);
     }
 
     /**
