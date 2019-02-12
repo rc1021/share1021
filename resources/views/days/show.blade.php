@@ -57,7 +57,10 @@
         </div>
         <hr>
         <div>
-            <div class="text-right"><small>從<span class="text-success">{{$row->created_at->format("Y-m-d")}}</span>開始，您是這篇文章第<span class="text-primary">{{$visit_count}}</span>個訪問者</small></div>
+            <div class="text-right">
+                <small>從<span class="text-success"> {{$row->created_at->format("Y-m-d")}} </span>開始，您是這篇文章第 <span class="text-primary">{{$visit_count}} </span>個訪問者</small><br>
+                <small class="text-muted">( 於 2019-02-13 開始計算 )</small>
+            </div>
             <b>文稿：</b>
             <p>{!!$row->content!!}</p>
         </div>
