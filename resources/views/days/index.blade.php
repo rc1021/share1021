@@ -26,7 +26,7 @@
       <div class="col-lg-8 col-md-10 mx-auto">
         @foreach ($collection as $item)
         <div class="post-preview">
-          <a href="post.html">
+          <a href="{{route('day.show', $item->id)}}">
             <h2 class="post-title">
               Day {{$item->id}}
             </h2>
