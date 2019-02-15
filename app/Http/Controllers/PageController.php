@@ -49,7 +49,7 @@ class PageController extends Controller
     {
         try {
             $row = Page::where("slug", $slug)->get();
-            if(isset($row))
+            if(!isset($row))
                 throw new Exception("找不到頁面");
             views($row)->record();
             $total = views($row)->unique()->count();
