@@ -6,7 +6,7 @@
 @section('content')
   
   <!-- Page Header -->
-  <header class="masthead">
+  <header class="masthead" style="background-image: url(https://images.pexels.com/photos/159621/open-book-library-education-read-159621.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260)">
     <div class="overlay"></div>
     <div class="container">
       <div class="row">
