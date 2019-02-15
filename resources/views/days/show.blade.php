@@ -1,10 +1,10 @@
 @extends('layouts.master')
 
-@section('title', $row->title)
+@section('title', '#'.$row->id.' '.$row->title)
 @section('description', str_limit(strip_tags($row->content), 50))
 
 @section('content')
-  <article class="mt-5">
+  <article class="mt-5 pt-2">
     <!-- Main Content -->
     <div class="container ">
       <div class="row">
@@ -12,7 +12,7 @@
           <!-- Begin page content -->
           <main role="main" class="flex-shrink-0">
             <div class="">
-              <h4 class="mt-2">{{$row->title}}</h4>
+              <h4 class="mt-2">{{'#'.$row->id.' '.$row->title}}</h4>
               <div class="video-wrapper text-center"> 
                   <iframe src="{{$row->video_url}}?rel=0&autoplay=1" frameborder="0"></iframe>
               </div>
