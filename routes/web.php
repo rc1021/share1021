@@ -11,6 +11,10 @@
 |
 */
 
+if (App::environment('production', 'staging')) {
+    URL::forceScheme('https');
+}
+
 Route::get('/', 'DayController@index');
 Route::get('days', 'DayController@index');
 Route::resource('day', 'DayController')->only(['index', 'show']);
