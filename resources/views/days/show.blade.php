@@ -8,6 +8,12 @@
 
     <link href="//stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <style>
+      body {
+        padding-bottom: 40px;
+      }
+      footer {
+        background-color: aliceblue;
+      }
         .bd-placeholder-img {
           font-size: 1.125rem;
           text-anchor: middle;
@@ -58,8 +64,8 @@
         <hr>
         <div>
             <div class="text-right">
-                <small>從<span class="text-success"> {{$row->created_at->format("Y-m-d")}} </span>開始，您是這篇文章第 <span class="text-primary">{{$visit_count}} </span>個訪問者</small><br>
-                <small class="text-muted">( 於 2019-02-13 開始計算 )</small>
+                <small>從<span class="text-success"> {{$row->created_at->format("Y-m-d")}} </span>開始</small><br>
+                <small>您是這篇文章第 <span class="text-primary">{{$visit_count}} </span>個訪問者</small>
             </div>
             <b>文稿：</b>
             <p>{!!$row->content!!}</p>
@@ -67,6 +73,12 @@
       </div>
     </main>
     
+    <!-- START FOOTER DARK-->
+    <footer class="navbar footer fixed-bottom footer-light footer-shadow content container-fluid text-right">
+        <small>加入頻道，週一至五6:30發送知識語音給您</small><a href="https://line.me/R/ti/p/%40qkm8103n"><img height="20" border="0" alt="加入好友" src="https://media.line.me/img/web/lineit_select_line_icon_02.png"></a>
+    </footer>
+    <!-- START FOOTER DARK-->
+
     <script src="//code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="//code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E=" crossorigin="anonymous"></script>
     <script src="//stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.bundle.min.js" integrity="sha384-zDnhMsjVZfS3hiP7oCBRmfjkQC4fzxVxFhBx8Hkz2aZX8gEvA/jsP3eXRCvzTofP" crossorigin="anonymous"></script>
