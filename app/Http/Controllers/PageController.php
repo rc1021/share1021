@@ -48,10 +48,12 @@ class PageController extends Controller
     public function show($slug)
     {
         try {
-            $row = Page::where("slug", $slug)->get();
+            $row = Page::where("slug", $slug)->first();
             if(!isset($row))
                 throw new Exception("找不到頁面");
-            return view('pages.show', ['row' => $row]);
+            views($row)->record();
+            $total = views($row)->unique()->count();
+            return view('pages.show', ['row' => $row, 'visit_count' => $total]);
         }
         catch(Exception $e) {
             return $e->getMessage();
