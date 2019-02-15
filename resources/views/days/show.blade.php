@@ -75,7 +75,11 @@
     
     <!-- START FOOTER DARK-->
     <footer class="navbar footer fixed-bottom footer-light footer-shadow content container-fluid text-right">
-        <small>加入頻道，週一至五6:30發送知識語音給您</small><a href="https://line.me/R/ti/p/%40qkm8103n"><img height="20" border="0" alt="加入好友" src="https://media.line.me/img/web/lineit_select_line_icon_02.png"></a>
+        <div>
+          <small>加入頻道 週一至五6:30發送知識語音給您</small>
+          <a href="https://line.me/R/ti/p/%40qkm8103n"><img height="20" border="0" alt="加入好友" src="https://media.line.me/img/web/lineit_select_line_icon_02.png"></a>
+          <a href="https://www.instagram.com/share.1021/" target="_blank"><img height="20" border="0" alt="加入好友" src="https://instagram-brand.com/wp-content/uploads/2016/11/Instagram_AppIcon_Aug2017.png?w=20"></a>
+        </div>
     </footer>
     <!-- START FOOTER DARK-->
 
