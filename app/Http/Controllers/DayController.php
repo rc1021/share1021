@@ -15,7 +15,7 @@ class DayController extends Controller
      */
     public function index()
     {
-        $posts = DayStory::orderBy('created_at', 'desc')->paginate(15);
+        $posts = DayStory::orderBy('id', 'desc')->paginate(15);
         return view('days.index', ['collection' => $posts]);
     }
 
