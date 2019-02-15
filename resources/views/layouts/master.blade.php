@@ -99,6 +99,6 @@
     <script src="//stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.bundle.min.js" integrity="sha384-zDnhMsjVZfS3hiP7oCBRmfjkQC4fzxVxFhBx8Hkz2aZX8gEvA/jsP3eXRCvzTofP" crossorigin="anonymous"></script>
 
     <!-- Custom scripts for this template -->
-    <script src="{{ asset('js/clean-blog.min.js') }}"></script>
+    <script src="{{ secure_asset('js/clean-blog.min.js') }}"></script>
 </body>
 </html>
