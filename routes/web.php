@@ -11,11 +11,10 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
-Route::resource('day', 'DayController')->only(['show']);
+Route::get('/', 'DayController@index');
+Route::get('days', 'DayController@index');
+Route::resource('day', 'DayController')->only(['index', 'show']);
+Route::get('page/{slug}', 'PageController@show')->name('page.show');
 // Route::resource('goals', 'MyGoalController')->only(['store']);
 
 

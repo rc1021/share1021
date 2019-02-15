@@ -3,10 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\DayStory;
+use App\Page;
 use Exception;
 
-class DayController extends Controller
+class PageController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,8 +15,7 @@ class DayController extends Controller
      */
     public function index()
     {
-        $posts = DayStory::paginate(15);
-        return view('days.index', ['collection' => $posts]);
+        //
     }
 
     /**
@@ -46,16 +45,18 @@ class DayController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($slug)
     {
         try {
-            $post = DayStory::findOrFail($id);
-            views($post)->record();
-            $total = views($post)->unique()->count();
-            return view('days.show', ['row' => $post, 'visit_count' => $total]);
+            $row = Page::where("slug", $slug)->get();
+            if(isset($row))
+                throw new Exception("找不到頁面");
+            views($row)->record();
+            $total = views($row)->unique()->count();
+            return view('pages.show', ['row' => $row, 'visit_count' => $total]);
         }
         catch(Exception $e) {
-            return "這篇文章還沒發佈喔, 敬請期待 :)";
+            return $e->getMessage();
         }
     }
 
