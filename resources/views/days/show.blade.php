@@ -11,7 +11,7 @@
         <div class="col-lg-8 col-md-10 mx-auto">
           <!-- Begin page content -->
           <main role="main" class="flex-shrink-0">
-            <div class="container">
+            <div class="">
               <h4 class="mt-2">{{$row->title}}</h4>
               <div class="video-wrapper text-center"> 
                   <iframe src="{{$row->video_url}}?rel=0&autoplay=1" frameborder="0"></iframe>

@@ -40,7 +40,7 @@
         @endforeach
         <!-- Pager -->
         <div class="clearfix">
-            {{ $users->links() }}
+            {{ $collection->links() }}
         </div>
       </div>
     </div>
