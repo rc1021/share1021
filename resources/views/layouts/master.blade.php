@@ -48,7 +48,6 @@
         }
       </style>
       <!-- Custom styles for this template -->
-      <link href="{{ secure_asset('css/sticky-footer.css') }}" rel="stylesheet">
       <link href="{{ secure_asset('css/clean-blog.min.css') }}" rel="stylesheet">
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
