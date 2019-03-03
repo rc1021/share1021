@@ -68,6 +68,7 @@
         });
     </script>
 
+    <script async custom-element="amp-auto-ads" src="//cdn.ampproject.org/v0/amp-auto-ads-0.1.js"></script>
 </head>
 <body>
 
@@ -92,6 +93,10 @@
         </nav>
 
     @yield('content')
+
+    <amp-auto-ads type="adsense"
+        data-ad-client="ca-pub-9965291835469846">
+    </amp-auto-ads>
 
     <script src="//code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="//code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E=" crossorigin="anonymous"></script>
