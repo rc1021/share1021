@@ -35,7 +35,7 @@
   @include("shared._adsense")
     
   <!-- START FOOTER DARK-->
-  <footer class="navbar footer fixed-bottom footer-light footer-shadow content container-fluid text-right">
+  <footer class="footer footer-light footer-shadow">
       <div class="text-center">
         <small>加入頻道週一至五6:30發送知識語音給您</small>
         <a href="https://line.me/R/ti/p/%40qkm8103n"><img height="20" border="0" alt="加入好友" src="https://media.line.me/img/web/lineit_select_line_icon_02.png"></a>
