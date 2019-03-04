@@ -31,8 +31,6 @@
       </div>
     </div>
   </article>
-
-  @include("shared._adsense")
     
   <!-- START FOOTER DARK-->
   <footer class="footer footer-light footer-shadow">
