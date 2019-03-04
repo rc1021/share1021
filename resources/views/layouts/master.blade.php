@@ -15,10 +15,15 @@
     <link href="//stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <!-- Custom fonts for this template -->
     <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    
+    <!-- Custom styles for this template -->
+    <link href="{{ secure_asset('css/clean-blog.min.css') }}" rel="stylesheet">
   
     <style>
+      @import url(https://fonts.googleapis.com/earlyaccess/cwtexyen.css);
       body {
-        padding-bottom: 40px;
+        font-family: 'cwTeXYen', sans-serif;
+        font-weight: 300;
       }
       footer {
         background-color: aliceblue;
@@ -47,8 +52,6 @@
             height: 100%;
         }
       </style>
-      <!-- Custom styles for this template -->
-      <link href="{{ secure_asset('css/clean-blog.min.css') }}" rel="stylesheet">
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-134198588-1"></script>
@@ -68,7 +71,7 @@
         });
     </script>
 
-    <script async custom-element="amp-auto-ads" src="//cdn.ampproject.org/v0/amp-auto-ads-0.1.js"></script>
+    <script async custom-element="amp-auto-ads" src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js"></script>
 </head>
 <body>
 
@@ -93,10 +96,6 @@
         </nav>
 
     @yield('content')
-
-    <amp-auto-ads type="adsense"
-        data-ad-client="ca-pub-9965291835469846">
-    </amp-auto-ads>
 
     <script src="//code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="//code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E=" crossorigin="anonymous"></script>
