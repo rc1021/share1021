@@ -4,33 +4,33 @@
 @section('description', str_limit(strip_tags($row->content), 50))
 
 @section('content')
-  <article class="mt-5 pt-2">
-    <!-- Main Content -->
-    <div class="container ">
-      <div class="row">
-        <div class="col-lg-8 col-md-10 mx-auto">
-          <!-- Begin page content -->
-          <main role="main" class="flex-shrink-0">
-            <div class="">
-              <h4 class="mt-2">{{'#'.$row->id.' '.$row->title}}</h4>
-              <div class="video-wrapper text-center"> 
-                  <iframe src="{{$row->video_url}}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<!-- Main Content -->
+<div class="container mt-5 pt-2>
+  <div class="row">
+    <div class="col-lg-8 col-md-10 mx-auto">
+      <!-- Begin page content -->
+      <main role="main" class="flex-shrink-0">
+        <div class="">
+          <h4 class="mt-2">{{'#'.$row->id.' '.$row->title}}</h4>
+          <div class="video-wrapper text-center"> 
+              <iframe src="{{$row->video_url}}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <hr>
+          <div>
+              <div class="text-right">
+                  <small>從<span class="text-success"> {{$row->created_at->format("Y-m-d")}} </span>開始</small><br>
+                  <small>您是這篇文章第 <span class="text-primary">{{$visit_count}} </span>個訪問者</small>
               </div>
-              <hr>
-              <div>
-                  <div class="text-right">
-                      <small>從<span class="text-success"> {{$row->created_at->format("Y-m-d")}} </span>開始</small><br>
-                      <small>您是這篇文章第 <span class="text-primary">{{$visit_count}} </span>個訪問者</small>
-                  </div>
-                  <b>文稿：</b>
-                  <p>{!!$row->content!!}</p>
-              </div>
-            </div>
-          </main>
+              <b>文稿：</b>
+              <article>
+              <p>{!!$row->content!!}</p>
+              </article>
+          </div>
         </div>
-      </div>
+      </main>
     </div>
-  </article>
+  </div>
+</div>
     
   <!-- START FOOTER DARK-->
   <footer class="footer footer-light footer-shadow">
