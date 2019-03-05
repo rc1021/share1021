@@ -3,6 +3,10 @@
 @section('title', '首頁')
 @section('description', '')
 
+@section('js')
+  @include("shared.js._adsense")
+@endsection
+
 @section('content')
 
   <!-- Page Header -->

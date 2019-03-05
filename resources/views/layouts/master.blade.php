@@ -52,6 +52,8 @@
             height: 100%;
         }
       </style>
+      
+    @yield('css')
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-134198588-1"></script>
@@ -63,24 +65,16 @@
     gtag('config', 'UA-134198588-1');
     </script>
 
-    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-    <script>
-        (adsbygoogle = window.adsbygoogle || []).push({
-              google_ad_client: "ca-pub-9965291835469846",
-              enable_page_level_ads: true
-        });
-    </script>
-
-    <script async custom-element="amp-auto-ads" src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js"></script>
+    @yield('js')
 </head>
 <body>
 
         <!-- Navigation -->
-        <nav id="mainNav" class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
           <div class="container">
             <a class="navbar-brand" href="/"><i class="fa fa-home" aria-hidden="true"></i></a>
             <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-              <i class="fa fa-bars"></i>
+              <i class="fa fa-bars"></i>Day List
             </button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
               <ul class="navbar-nav ml-auto">

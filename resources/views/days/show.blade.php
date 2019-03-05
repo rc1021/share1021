@@ -3,6 +3,10 @@
 @section('title', '#'.$row->id.' '.$row->title)
 @section('description', str_limit(strip_tags($row->content), 50))
 
+@section('js')
+  @include("shared.js._adsense")
+@endsection
+
 @section('content')
 <!-- Main Content -->
 <div class="container mt-5 pt-2">
