@@ -9,11 +9,12 @@
     "license": "MIT",
     "require": {
         "php": "^7.1.3",
-        "ext-gd": "^7.2",
+        "ext-gd": "*",
         "cyrildewit/eloquent-viewable": "^3.1",
         "fideloper/proxy": "^4.0",
         "laravel/framework": "5.7.*",
         "laravel/tinker": "^1.0",
+        "league/flysystem-aws-s3-v3": "^1.0",
         "linecorp/line-bot-sdk": "^3.6",
         "tcg/voyager": "^1.1"
     },
