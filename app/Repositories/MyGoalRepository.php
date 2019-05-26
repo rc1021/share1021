@@ -32,7 +32,7 @@ class MyGoalRepository
 
                                         foreach ($goals as $goal)
                                         {
-                                            $msg =  $goal->text."\n\n立願日(".$goal->created_at.")";
+                                            $msg =  "2019我希望...\n\n".$goal->text."\n\n立願日(".$goal->created_at.")";
                                         }
                                     }
                                     catch(Exception $e) {
