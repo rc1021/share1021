@@ -18,25 +18,40 @@ class MyGoalRepository
                     $source = $event['source'];
                     switch ($message['type']) {
                         case 'text':
-                            // 記在資料庫
-                            $new_goal = new Goal;
-                            $new_goal->year = date('Y');
-                            $new_goal->text = $message['text'];
-                            if($source['type'] == "user")
-                                $new_goal->userId = $source['userId'];
 
-                            $new_goal->save();
+                            switch($message['text']) {
+                                case '敲金蛋':
 
-                            // 通知聽友 OK
-                            $client->replyMessage([
-                                'replyToken' => $event['replyToken'],
-                                'messages' => [
-                                    [
-                                        'type' => 'text',
-                                        'text' => "🌄已更新年計劃\n🥚並放入時光彩蛋\n--\n在午夜12點前都可以變更:)"
-                                    ]
-                                ]
-                            ]);
+                                    $msg = "";
+
+                                    try {
+                                        $goals = Goal::where('userId', $source['userId'])->get();
+
+                                        if(count($goals) == 0)
+                                            throw new Exception("嗨，去年年底你還來不及參加這個活動，所以還沒有你的記錄，請關注聽說的 instagram 最新消息都可以在那裡找到喔 :) 祝你順心", 1);
+
+                                        foreach ($goals as $goal)
+                                        {
+                                            $msg .=  $goal->created_at."\n".$goal->text."\n---\n";
+                                        }
+                                    }
+                                    catch(Exception $e) {
+                                        $msg = $e->getMessage();
+                                    }
+
+
+                                    // 通知聽友 OK
+                                    $client->replyMessage([
+                                        'replyToken' => $event['replyToken'],
+                                        'messages' => [
+                                            [
+                                                'type' => 'text',
+                                                'text' => $msg
+                                            ]
+                                        ]
+                                    ]);
+                                    break;
+                            }
                             break;
                         default:
                             error_log('Unsupported message type: ' . $message['type']);

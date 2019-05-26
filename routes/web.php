@@ -17,9 +17,11 @@ if (App::environment('production', 'staging')) {
 
 Route::get('/', 'DayController@index');
 Route::get('days', 'DayController@index');
+Route::get('movies', 'MovieController@index');
+Route::get('books', 'BookController@index');
 Route::resource('day', 'DayController')->only(['index', 'show']);
 Route::get('page/{slug}', 'PageController@show')->name('page.show');
-// Route::resource('goals', 'MyGoalController')->only(['store']);
+Route::resource('goals', 'MyGoalController')->only(['store']);
 
 
 Route::group(['prefix' => 'admin'], function () {
