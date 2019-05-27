@@ -51,9 +51,7 @@ class PageController extends Controller
             $row = Page::where("slug", $slug)->first();
             if(!isset($row))
                 throw new Exception("找不到頁面");
-            views($row)->record();
-            $total = views($row)->unique()->count();
-            return view('pages.show', ['row' => $row, 'visit_count' => $total]);
+            return view('pages.show', ['row' => $row]);
         }
         catch(Exception $e) {
             return $e->getMessage();

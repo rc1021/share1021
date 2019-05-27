@@ -21,10 +21,6 @@
           </div>
           <hr>
           <div>
-              <div class="text-right">
-                  <small>從<span class="text-success"> {{$row->created_at->format("Y-m-d")}} </span>開始</small><br>
-                  <small>您是這篇文章第 <span class="text-primary">{{$visit_count}} </span>個訪問者</small>
-              </div>
               <b>文稿：</b>
               <article>
               <p>{!!$row->content!!}</p>

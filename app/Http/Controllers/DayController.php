@@ -50,9 +50,7 @@ class DayController extends Controller
     {
         try {
             $post = DayStory::findOrFail($id);
-            views($post)->record();
-            $total = views($post)->unique()->count();
-            return view('days.show', ['row' => $post, 'visit_count' => $total]);
+            return view('days.show', ['row' => $post]);
         }
         catch(Exception $e) {
             return "這篇文章還沒發佈喔, 敬請期待 :)";
